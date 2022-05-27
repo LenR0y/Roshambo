@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Rock Paper Scissors</h1>
+    </header>
+    <main class="main">
+      <div class="scorecard">
+        <h2 class="score-info" id="scoreInfo">Choose Wisely</h2>
+        <h3 class="score-message" id="scoreMessage">
+          First to score 5pts wins the match
+        </h3>
+        <div class="scores-container">
+          <div class="score-box">
+            <div class="sign" id="playerSign">
+              <img
+                class="playerIcon"
+                alt="question mark"
+                src="./Images/question-mark.png"
+              />
+            </div>
+            <p class="score" id="playerScore">Player: 0</p>
+          </div>
+          <div class="score-box">
+            <div class="sign" id="computerSign">
+              <img
+                class="playerIcon"
+                alt="question mark"
+                src="./Images/question-mark.png"
+              />
+            </div>
+            <p class="score" id="computerScore">Computer: 0</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button class="btn btn-square" id="rockBtn">
+          <div class="sign">
+            <img
+              class="iconLogo"
+              alt="image of a rock"
+              src="./Images/rockicon.png"
+            />
+          </div>
+        </button>
+        <button class="btn btn-square" id="paperBtn">
+          <div class="sign">
+            <img
+              class="iconLogo"
+              alt="image of a toilet paper"
+              src="./Images/toilet-paper.png"
+            />
+          </div>
+        </button>
+        <button class="btn btn-square" id="scissorsBtn">
+          <div class="sign">
+            <img
+              class="iconLogo"
+              alt="image of a scissor"
+              src="./Images/scissorsicon.png"
+            />
+          </div>
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getUTCFullYear());
+        </script>
+        LenR0y
+      </p>
+    </footer>
+    <div class="modal" id="endgameModal">
+      <p class="modal-title" id="endgameMsg"></p>
+      <button class="btn btn-restart" id="restartBtn">TRY AGAIN?</button>
+    </div>
+    <div class="overlay" id="overlay"></div>
+    <script src="script.js"></script>
+  </body>
+</html>

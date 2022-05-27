@@ -1,0 +1,224 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-image: url(./Images/background.png);
+  font-family: sans-serif;
+  line-height: 1.6;
+  margin-bottom: 100px;
+}
+
+button {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0px;
+  background-color: whitesmoke;
+  opacity: 0.6;
+}
+
+.title {
+  font-size: 32px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+/* MAIN */
+
+.main {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.score {
+  font-size: 20px;
+  color: white;
+  background-color: black;
+  opacity: 0.8;
+}
+
+.scoreboard {
+  margin-bottom: 15px;
+}
+
+.score-info {
+  font-size: 32px;
+  color: white;
+}
+
+.score-message {
+  font-size: 20px;
+  margin-bottom: 60px;
+  color: white;
+}
+
+.scores-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.score-box {
+  width: 140px;
+}
+
+.playerIcon {
+  max-width: 100%;
+  height: auto;
+}
+
+.iconLogo {
+  max-width: 80%;
+  height: auto;
+  margin-top: 20px;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.btn {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-square {
+  width: 160px;
+  height: 160px;
+  margin-top: 60px;
+}
+
+.btn:hover {
+  background-color: grey;
+}
+
+.btn:active {
+  background-color: rgb(156, 155, 155);
+}
+
+.sign {
+  font-size: 100px;
+  margin-bottom: 10px;
+}
+
+/* FOOTER */
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 98%;
+  padding: 10px;
+  color: white;
+  font-size: 20px;
+}
+
+/* MODAL */
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 30px;
+  border-radius: 80px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  font-size: 30px;
+  user-select: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-title {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.btn-restart {
+  font-size: 32px;
+  font-weight: bolder;
+}
+
+.btn-restart {
+  padding: 10px 20px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  opacity: 0.6;
+}
+
+.overlay-active {
+  display: block;
+}
+
+@media (max-width: 550px) {
+  .title {
+    font-size: 18px;
+  }
+
+  .score-info {
+    font-size: 26px;
+  }
+
+  .buttons {
+    gap: 10px;
+  }
+
+  .btn-square {
+    width: 100px;
+    height: 110px;
+  }
+
+  .sign {
+    font-size: 50px;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}
